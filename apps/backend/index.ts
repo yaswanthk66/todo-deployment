@@ -17,9 +17,6 @@ app.get("/users", (req, res) => {
 
 app.post("/user", (req, res) => {
   const { username, password } = req.body;
-
-  console.log(username);
-  console.log(password)
   
   if (!username || !password) {
     res.status(400).json({ error: "Username and password are required" });
